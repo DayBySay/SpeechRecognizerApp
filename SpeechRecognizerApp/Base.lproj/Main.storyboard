@@ -29,24 +29,36 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="sWp-cS-L72"/>
                                 </constraints>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" title="Record"/>
                                 <connections>
                                     <action selector="didTouchUpRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8FS-4o-Ai3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IU4-7T-zbq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Awc-Gb-Jde"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="niD-v1-sQB" firstAttribute="top" secondItem="IU4-7T-zbq" secondAttribute="bottom" constant="8" id="1ol-ZU-Oqo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xAy-VK-gQI" secondAttribute="bottom" constant="15" id="8Bf-zQ-Gwl"/>
                             <constraint firstItem="niD-v1-sQB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ALT-ex-3vI"/>
                             <constraint firstItem="niD-v1-sQB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Tde-fg-QTT"/>
-                            <constraint firstItem="niD-v1-sQB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wkw-HJ-gws"/>
+                            <constraint firstItem="IU4-7T-zbq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="61" id="cBI-p2-LzO"/>
                             <constraint firstItem="xAy-VK-gQI" firstAttribute="top" secondItem="niD-v1-sQB" secondAttribute="bottom" constant="8" id="v6v-WX-s8b"/>
                             <constraint firstItem="xAy-VK-gQI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vJB-Pq-EtE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IU4-7T-zbq" secondAttribute="trailing" constant="60" id="wC3-Ie-3wB"/>
+                            <constraint firstItem="IU4-7T-zbq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zth-F8-M6W"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="recordButton" destination="xAy-VK-gQI" id="jKe-25-O6O"/>
+                        <outlet property="statusLabel" destination="IU4-7T-zbq" id="vKG-BC-duk"/>
                         <outlet property="textView" destination="niD-v1-sQB" id="UhA-ag-J29"/>
                     </connections>
                 </viewController>

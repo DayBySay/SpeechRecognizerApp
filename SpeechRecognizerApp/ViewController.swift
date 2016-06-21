@@ -12,6 +12,7 @@ import Speech
 class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
     
     private let audioEngine = AVAudioEngine()
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -56,8 +57,10 @@ class ViewController: UIViewController {
     @IBAction func didTouchUpRecordButton(_ sender: UIButton) {
         if audioEngine.isRunning {
             self.stopRecording()
+            self.statusLabel.text = "End Recording"
         } else {
             try! self.startRecording()
+            self.statusLabel.text = "Now Recording"
         }
     }
     

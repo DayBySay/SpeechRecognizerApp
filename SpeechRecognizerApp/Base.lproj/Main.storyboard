@@ -31,7 +31,7 @@
                                 </constraints>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="didTouchUpRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dl4-Yo-0Og"/>
+                                    <action selector="didTouchUpRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8FS-4o-Ai3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,7 +46,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="didTouchUpRecordButton" destination="xAy-VK-gQI" id="Xdg-a0-6dU"/>
                         <outlet property="recordButton" destination="xAy-VK-gQI" id="jKe-25-O6O"/>
                         <outlet property="textView" destination="niD-v1-sQB" id="UhA-ag-J29"/>
                     </connections>

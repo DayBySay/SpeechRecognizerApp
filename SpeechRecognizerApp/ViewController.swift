@@ -12,6 +12,8 @@ import Speech
 class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var recordButton: UIButton!
+    
+    private let audioEngine = AVAudioEngine()
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(localeIdentifier: "ja-JP"))
     
     override func viewDidLoad() {
@@ -47,6 +49,32 @@ class ViewController: UIViewController {
                 }
             })
         }
+    }
+    
+    @IBAction func didTouchUpRecordButton(_ sender: UIButton) {
+        if audioEngine.isRunning {
+            self.stopRecording()
+        } else {
+            try! self.startRecording()
+        }
+    }
+    
+    func startRecording() throws {
+        let audioSession = AVAudioSession.sharedInstance()
+        try audioSession.setCategory(AVAudioSessionCategoryRecord)
+        try audioSession.setMode(AVAudioSessionModeMeasurement)
+        try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
+        
+        guard let inpudNode = self.audioEngine.inputNode else {
+            return
+        }
+        
+        audioEngine.prepare()
+        try! audioEngine.start()
+    }
+    
+    func stopRecording() {
+        self.audioEngine.stop()
     }
 }
 

@@ -30,6 +30,9 @@
                                     <constraint firstAttribute="height" constant="30" id="sWp-cS-L72"/>
                                 </constraints>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="didTouchUpRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dl4-Yo-0Og"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,6 +46,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="didTouchUpRecordButton" destination="xAy-VK-gQI" id="Xdg-a0-6dU"/>
                         <outlet property="recordButton" destination="xAy-VK-gQI" id="jKe-25-O6O"/>
                         <outlet property="textView" destination="niD-v1-sQB" id="UhA-ag-J29"/>
                     </connections>

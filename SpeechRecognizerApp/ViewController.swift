@@ -113,6 +113,7 @@ class ViewController: UIViewController {
     
     func stopRecording() {
         self.audioEngine.stop()
+        recognitionRequest?.endAudio()
     }
 }
 

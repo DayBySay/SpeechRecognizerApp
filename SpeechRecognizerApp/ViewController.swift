@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Speech
 
 class ViewController: UIViewController {
-
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(localeIdentifier: "ja-JP"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.setupSpeechRecognizer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +23,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func setupSpeechRecognizer() {
+        SFSpeechRecognizer.requestAuthorization { (authStatus) in
+            OperationQueue.main().addOperation({
+                switch authStatus {
+                case .authorized:
+                    print("authorized")
+                    
+                case .denied:
+                    print("denied")
+                    
+                case .restricted:
+                    print("restricted")
+                    
+                case .notDetermined:
+                    print("notDetermined")
+                }
+            })
+        }
+    }
 }
 

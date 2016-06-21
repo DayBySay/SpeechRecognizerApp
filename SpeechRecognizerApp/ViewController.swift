@@ -10,6 +10,8 @@ import UIKit
 import Speech
 
 class ViewController: UIViewController {
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var recordButton: UIButton!
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(localeIdentifier: "ja-JP"))
     
     override func viewDidLoad() {
@@ -28,16 +30,20 @@ class ViewController: UIViewController {
             OperationQueue.main().addOperation({
                 switch authStatus {
                 case .authorized:
-                    print("authorized")
+                    self.textView.text = "authorized"
+                    self.recordButton.isEnabled = true
                     
                 case .denied:
-                    print("denied")
+                    self.textView.text = "denied"
+                    self.recordButton.isEnabled = false
                     
                 case .restricted:
-                    print("restricted")
+                    self.textView.text = "restricted"
+                    self.recordButton.isEnabled = false
                     
                 case .notDetermined:
-                    print("notDetermined")
+                    self.textView.text = "notDetermined"
+                    self.recordButton.isEnabled = false
                 }
             })
         }

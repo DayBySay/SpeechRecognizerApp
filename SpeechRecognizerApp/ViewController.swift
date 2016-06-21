@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(localeIdentifier: "ja-JP"))
+    private var tmpText: String = ""
+    private var currentText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,16 +95,17 @@ class ViewController: UIViewController {
             var isFinal = false
             
             if let result = result {
-                self.textView.text = result.bestTranscription.formattedString
+                self.tmpText = result.bestTranscription.formattedString
+                let text = self.currentText + self.tmpText
+                self.textView.text = text
                 isFinal = result.isFinal
+                
+                print("text:\(result.bestTranscription.formattedString) isFinal:\(isFinal)")
             }
             
-            if error != nil || isFinal {
-                self.audioEngine.stop()
-                inputNode.removeTap(onBus: 0)
-                
-                self.recognitionRequest = nil
-                self.recognitionTask = nil
+            if isFinal {
+                self.currentText += self.tmpText
+                self.tmpText = ""
             }
         })
         

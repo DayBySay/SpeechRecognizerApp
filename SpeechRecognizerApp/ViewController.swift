@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var recordButton: UIButton!
     
     private let audioEngine = AVAudioEngine()
+    private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
+    private var recognitionTask: SFSpeechRecognitionTask?
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(localeIdentifier: "ja-JP"))
     
     override func viewDidLoad() {
@@ -65,8 +67,44 @@ class ViewController: UIViewController {
         try audioSession.setMode(AVAudioSessionModeMeasurement)
         try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
         
-        guard let inpudNode = self.audioEngine.inputNode else {
+        if let recognitionTask = self.recognitionTask {
+            recognitionTask.cancel()
+            self.recognitionTask = nil
+        }
+        
+        self.recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+        
+        guard let recognitionRequest = self.recognitionRequest else {
             return
+        }
+        
+        recognitionRequest.shouldReportPartialResults = true
+        
+        guard let inputNode = self.audioEngine.inputNode else {
+            return
+        }
+        let recordingFormat = inputNode.outputFormat(forBus: 0)
+
+        
+        recognitionTask = self.speechRecognizer?.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
+            var isFinal = false
+            
+            if let result = result {
+                self.textView.text = result.bestTranscription.formattedString
+                isFinal = result.isFinal
+            }
+            
+            if error != nil || isFinal {
+                self.audioEngine.stop()
+                inputNode.removeTap(onBus: 0)
+                
+                self.recognitionRequest = nil
+                self.recognitionTask = nil
+            }
+        })
+        
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, when) in
+            self.recognitionRequest?.append(buffer)
         }
         
         audioEngine.prepare()

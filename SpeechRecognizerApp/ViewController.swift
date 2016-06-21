@@ -59,14 +59,13 @@ class ViewController: UIViewController {
     @IBAction func didTouchUpRecordButton(_ sender: UIButton) {
         if audioEngine.isRunning {
             self.stopRecording()
-            self.statusLabel.text = "End Recording"
         } else {
             try! self.startRecording()
-            self.statusLabel.text = "Now Recording"
         }
     }
     
     func startRecording() throws {
+        self.statusLabel.text = "Now Recording"
         let audioSession = AVAudioSession.sharedInstance()
         try audioSession.setCategory(AVAudioSessionCategoryRecord)
         try audioSession.setMode(AVAudioSessionModeMeasurement)
@@ -106,6 +105,8 @@ class ViewController: UIViewController {
             if isFinal {
                 self.currentText += self.tmpText
                 self.tmpText = ""
+                self.stopRecording()
+                try! self.startRecording()
             }
         })
         
@@ -118,6 +119,8 @@ class ViewController: UIViewController {
     }
     
     func stopRecording() {
+        self.statusLabel.text = "End Recording"
+        self.audioEngine.inputNode?.removeTap(onBus: 0)
         self.audioEngine.stop()
         recognitionRequest?.endAudio()
     }

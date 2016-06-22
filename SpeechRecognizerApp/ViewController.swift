@@ -66,6 +66,8 @@ class ViewController: UIViewController {
     
     func startRecording() throws {
         self.statusLabel.text = "Now Recording"
+        
+        
         let audioSession = AVAudioSession.sharedInstance()
         try audioSession.setCategory(AVAudioSessionCategoryRecord)
         try audioSession.setMode(AVAudioSessionModeMeasurement)

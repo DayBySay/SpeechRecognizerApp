@@ -19,7 +19,7 @@ class FRecognizeFromFileViewController: UIViewController {
     @IBAction func touchUpRecognizeButton(_ sender: AnyObject) {
         self.textView.text = ""
         
-        let path = Bundle.main().pathForResource("pannyashingyou128", ofType: "mp3")!
+        let path = Bundle.main().pathForResource("001-sibutomo", ofType: "mp3")!
         let audioFileURL = URL(fileURLWithPath: path)
         
         let recognizer = SFSpeechRecognizer()

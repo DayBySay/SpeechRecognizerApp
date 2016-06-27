@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		3A3D40601D1A7A0400A7071F /* FRecognizeFromFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D405F1D1A7A0400A7071F /* FRecognizeFromFileViewController.swift */; };
 		3A3D40621D1A885C00A7071F /* pannyashingyou128.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D40611D1A885C00A7071F /* pannyashingyou128.mp3 */; };
+		3AC454771D212A4300D186AD /* 001-sibutomo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3AC454761D212A4300D186AD /* 001-sibutomo.mp3 */; };
 		3ADF538C1D196DEE007D772A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF538B1D196DEE007D772A /* AppDelegate.swift */; };
 		3ADF538E1D196DEE007D772A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF538D1D196DEE007D772A /* ViewController.swift */; };
 		3ADF53911D196DEE007D772A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF538F1D196DEE007D772A /* Main.storyboard */; };
 		3ADF53931D196DEE007D772A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF53921D196DEE007D772A /* Assets.xcassets */; };
 		3ADF53961D196DEE007D772A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF53941D196DEE007D772A /* LaunchScreen.storyboard */; };
-		3ADF539E1D198AEE007D772A /* 001-sibutomo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF539D1D198AEE007D772A /* 001-sibutomo.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A3D405F1D1A7A0400A7071F /* FRecognizeFromFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRecognizeFromFileViewController.swift; sourceTree = "<group>"; };
 		3A3D40611D1A885C00A7071F /* pannyashingyou128.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pannyashingyou128.mp3; sourceTree = "<group>"; };
+		3AC454761D212A4300D186AD /* 001-sibutomo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "001-sibutomo.mp3"; sourceTree = "<group>"; };
 		3ADF53881D196DEE007D772A /* SpeechRecognizerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechRecognizerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADF538B1D196DEE007D772A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADF538D1D196DEE007D772A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		3ADF53921D196DEE007D772A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ADF53951D196DEE007D772A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ADF53971D196DEE007D772A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3ADF539D1D198AEE007D772A /* 001-sibutomo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "001-sibutomo.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 		3ADF538A1D196DEE007D772A /* SpeechRecognizerApp */ = {
 			isa = PBXGroup;
 			children = (
-				3ADF539D1D198AEE007D772A /* 001-sibutomo.mp3 */,
+				3AC454761D212A4300D186AD /* 001-sibutomo.mp3 */,
 				3A3D40611D1A885C00A7071F /* pannyashingyou128.mp3 */,
 				3ADF538B1D196DEE007D772A /* AppDelegate.swift */,
 				3ADF538D1D196DEE007D772A /* ViewController.swift */,
@@ -134,10 +134,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC454771D212A4300D186AD /* 001-sibutomo.mp3 in Resources */,
 				3A3D40621D1A885C00A7071F /* pannyashingyou128.mp3 in Resources */,
 				3ADF53961D196DEE007D772A /* LaunchScreen.storyboard in Resources */,
 				3ADF53931D196DEE007D772A /* Assets.xcassets in Resources */,
-				3ADF539E1D198AEE007D772A /* 001-sibutomo.mp3 in Resources */,
 				3ADF53911D196DEE007D772A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

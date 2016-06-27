@@ -15,11 +15,39 @@ class FRecognizeFromFileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    @IBAction func touchUpRecognizeButton(_ sender: AnyObject) {
+    @IBAction func touchUpDanseiButton(_ sender: AnyObject) {
         self.textView.text = ""
         
-        let path = Bundle.main().pathForResource("001-sibutomo", ofType: "mp3")!
+        let path = Bundle.main().pathForResource("Dansei", ofType: "mp3")!
+        let audioFileURL = URL(fileURLWithPath: path)
+        
+        let recognizer = SFSpeechRecognizer()
+        let request = SFSpeechURLRecognitionRequest(url: audioFileURL)
+        recognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
+            print (result?.bestTranscription.formattedString)
+            self.textView.text = result?.bestTranscription.formattedString
+        })
+    }
+    
+    @IBAction func touchUpJoseiButton(_ sender: AnyObject) {
+        self.textView.text = ""
+        
+        let path = Bundle.main().pathForResource("Josei", ofType: "mp3")!
+        let audioFileURL = URL(fileURLWithPath: path)
+        
+        let recognizer = SFSpeechRecognizer()
+        let request = SFSpeechURLRecognitionRequest(url: audioFileURL)
+        recognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
+            print (result?.bestTranscription.formattedString)
+            self.textView.text = result?.bestTranscription.formattedString
+        })
+    }
+    
+    
+    @IBAction func touchUpBosanButton(_ sender: UIButton) {
+        self.textView.text = ""
+        
+        let path = Bundle.main().pathForResource("Bosan", ofType: "mp3")!
         let audioFileURL = URL(fileURLWithPath: path)
         
         let recognizer = SFSpeechRecognizer()

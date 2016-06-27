@@ -102,6 +102,7 @@ class ViewController: UIViewController {
                 isFinal = result.isFinal
                 
                 print("text:\(result.bestTranscription.formattedString) isFinal:\(isFinal)")
+                print("text:\(result.bestTranscription.segments) isFinal:\(isFinal)")
             }
             
             if isFinal {

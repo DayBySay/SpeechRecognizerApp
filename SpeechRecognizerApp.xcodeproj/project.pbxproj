@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3A3D40601D1A7A0400A7071F /* FRecognizeFromFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D405F1D1A7A0400A7071F /* FRecognizeFromFileViewController.swift */; };
-		3A49F0411D212F8C00599A74 /* Isha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A49F03E1D212F8C00599A74 /* Isha.mp3 */; };
-		3A49F0421D212F8C00599A74 /* isutanbu-ru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A49F03F1D212F8C00599A74 /* isutanbu-ru.mp3 */; };
-		3A49F0431D212F8C00599A74 /* pannyashingyou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A49F0401D212F8C00599A74 /* pannyashingyou.mp3 */; };
+		3A49F0411D212F8C00599A74 /* Dansei.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A49F03E1D212F8C00599A74 /* Dansei.mp3 */; };
+		3A49F0421D212F8C00599A74 /* Josei.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A49F03F1D212F8C00599A74 /* Josei.mp3 */; };
+		3A49F0431D212F8C00599A74 /* Bosan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A49F0401D212F8C00599A74 /* Bosan.mp3 */; };
 		3ADF538C1D196DEE007D772A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF538B1D196DEE007D772A /* AppDelegate.swift */; };
 		3ADF538E1D196DEE007D772A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF538D1D196DEE007D772A /* ViewController.swift */; };
 		3ADF53911D196DEE007D772A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF538F1D196DEE007D772A /* Main.storyboard */; };
@@ -20,9 +20,9 @@
 
 /* Begin PBXFileReference section */
 		3A3D405F1D1A7A0400A7071F /* FRecognizeFromFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRecognizeFromFileViewController.swift; sourceTree = "<group>"; };
-		3A49F03E1D212F8C00599A74 /* Isha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Isha.mp3; sourceTree = "<group>"; };
-		3A49F03F1D212F8C00599A74 /* isutanbu-ru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "isutanbu-ru.mp3"; sourceTree = "<group>"; };
-		3A49F0401D212F8C00599A74 /* pannyashingyou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pannyashingyou.mp3; sourceTree = "<group>"; };
+		3A49F03E1D212F8C00599A74 /* Dansei.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dansei.mp3; sourceTree = "<group>"; };
+		3A49F03F1D212F8C00599A74 /* Josei.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Josei.mp3; sourceTree = "<group>"; };
+		3A49F0401D212F8C00599A74 /* Bosan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bosan.mp3; sourceTree = "<group>"; };
 		3ADF53881D196DEE007D772A /* SpeechRecognizerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechRecognizerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADF538B1D196DEE007D772A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADF538D1D196DEE007D772A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,9 +46,9 @@
 		3A49F03D1D212F8C00599A74 /* Speech */ = {
 			isa = PBXGroup;
 			children = (
-				3A49F03E1D212F8C00599A74 /* Isha.mp3 */,
-				3A49F03F1D212F8C00599A74 /* isutanbu-ru.mp3 */,
-				3A49F0401D212F8C00599A74 /* pannyashingyou.mp3 */,
+				3A49F03E1D212F8C00599A74 /* Dansei.mp3 */,
+				3A49F03F1D212F8C00599A74 /* Josei.mp3 */,
+				3A49F0401D212F8C00599A74 /* Bosan.mp3 */,
 			);
 			path = Speech;
 			sourceTree = "<group>";
@@ -145,12 +145,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A49F0421D212F8C00599A74 /* isutanbu-ru.mp3 in Resources */,
+				3A49F0421D212F8C00599A74 /* Josei.mp3 in Resources */,
 				3ADF53961D196DEE007D772A /* LaunchScreen.storyboard in Resources */,
 				3ADF53931D196DEE007D772A /* Assets.xcassets in Resources */,
 				3ADF53911D196DEE007D772A /* Main.storyboard in Resources */,
-				3A49F0411D212F8C00599A74 /* Isha.mp3 in Resources */,
-				3A49F0431D212F8C00599A74 /* pannyashingyou.mp3 in Resources */,
+				3A49F0411D212F8C00599A74 /* Dansei.mp3 in Resources */,
+				3A49F0431D212F8C00599A74 /* Bosan.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
